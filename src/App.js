@@ -63,6 +63,18 @@ const handleSubmit = (e) => {
    Buscar
   </button>
 </Form>
+
+<Container>
+  <Row>
+    <Col></Col>
+  </Row>
+</Container>
+
+<img src="${productoMaquetado.url}" alt="" />
+<img src="" alt="" />
+<img src="" alt="" />
+<img src="" alt="" />
+<img src="" alt="" />
     </div>
   );
 }
