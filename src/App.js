@@ -1,4 +1,4 @@
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from 'react';
 import { Col, Container, Form, Row, Card, Button } from "react-bootstrap";
 import './App.css';
@@ -10,10 +10,7 @@ function App() {
   const [collectionAdress, setcollectionAdress] = useState("")
 
   //UseEffect
-  useEffect(() => {
-    getAp();
-    getApi();
-  }, []);
+  
 
   //apikey
 
@@ -46,17 +43,26 @@ const handleSubmit = (e) => {
 };
 
   return (
-    <div>
-      <Form  onSubmit={handleSubmit}>
-        <Form.Label>Chain Id</Form.Label>
-        <input type="text" placeholder='Ingrese el Chain ID' onChange={(e)=>setchainId(e.target.value)}/>
-        <Form.Label>Collection Adress</Form.Label>
-        <input type="text" placeholder='Ingrese el Collection Adress' onChange={(e)=>setcollectionAdress(e.target.value)}/>
-        <Button></Button>
+    <div className="container">
+     
+     <h1 className="text-center m-3">NFT Collections</h1>
 
 
-      </Form >
-      
+      <Form className="container" style={{ width: "35rem", height: "35rem" }}  onSubmit={handleSubmit}>
+  <Form.Group className="my-3">
+    
+    <Form.Control type="text" placeholder='Ingrese el Chain ID' onChange={(e)=>setchainId(e.target.value)} />
+    
+  </Form.Group>
+
+  <Form.Group className="my-3">
+  
+    <Form.Control type="text" placeholder='Ingrese el Collection Adress' onChange={(e)=>setcollectionAdress(e.target.value)} />
+  </Form.Group>
+  <button className="btn btn-rosa " type="submit">
+   Buscar
+  </button>
+</Form>
     </div>
   );
 }
