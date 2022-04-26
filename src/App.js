@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { Col, Container, Form, Row, Card, Button } from "react-bootstrap";
 import './App.css';
 
 function App() {
@@ -46,15 +47,15 @@ const handleSubmit = (e) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label>Chain Id</label>
+      <Form  onSubmit={handleSubmit}>
+        <Form.Label>Chain Id</Form.Label>
         <input type="text" placeholder='Ingrese el Chain ID' onChange={(e)=>setchainId(e.target.value)}/>
-        <label>Collection Adress</label>
+        <Form.Label>Collection Adress</Form.Label>
         <input type="text" placeholder='Ingrese el Collection Adress' onChange={(e)=>setcollectionAdress(e.target.value)}/>
-        <button></button>
+        <Button></Button>
 
 
-      </form>
+      </Form >
       
     </div>
   );
