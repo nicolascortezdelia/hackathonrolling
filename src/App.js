@@ -83,7 +83,7 @@ const handleSubmit = (e) => {
     
 
 
-      <Form className="container" style={{ width: "35rem" }}  onSubmit={handleSubmit}>
+      <Form className="container" style={{ width: "30rem" }}  onSubmit={handleSubmit}>
   <Form.Group className="my-3">
     
     <Form.Control type="text" placeholder='Ingrese el Chain ID' onChange={(e)=>setchainId(e.target.value)} />
