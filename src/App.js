@@ -1,10 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from 'react';
-import { Col, Container, Form, Row, Card, Button } from "react-bootstrap";
 
-import co from 'co';
-import database from 'mime-db';
-import { useState, useEffect } from 'react';
+import {Container, Form, } from "react-bootstrap";
+
+
+import { useState } from 'react';
 import './App.css';
 import Img from './components/Img'
 
@@ -80,11 +79,11 @@ const handleSubmit = (e) => {
      
      <h1 className="text-center m-3">NFT Collections</h1>
 
-     <Img collection={collection}></Img>
+     
     
 
 
-      <Form className="container" style={{ width: "35rem", height: "35rem" }}  onSubmit={handleSubmit}>
+      <Form className="container" style={{ width: "35rem" }}  onSubmit={handleSubmit}>
   <Form.Group className="my-3">
     
     <Form.Control type="text" placeholder='Ingrese el Chain ID' onChange={(e)=>setchainId(e.target.value)} />
@@ -100,17 +99,13 @@ const handleSubmit = (e) => {
   </button>
 </Form>
 
-<Container>
-  <Row>
-    <Col></Col>
-  </Row>
+<Container className="text-center">
+<Img collection={collection}></Img>
 </Container>
 
-<img src="{productoMaquetado.url}"  alt="" />
-<img src="" alt="" />
-<img src="" alt="" />
-<img src="" alt="" />
-<img src="" alt="" />
+
+
+
     </div>
   );
 }
