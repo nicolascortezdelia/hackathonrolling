@@ -25,7 +25,18 @@ const getApi = async ()=>{
   try {
 
     const res = await fetch(apiCovalent)
-    console.log(res)
+   const appCollection = await res.json();
+   console.log(appCollection.data.items[0].collection_name);
+   console.log(appCollection.data.items[0].third_nft_image);
+   console.log(appCollection.data.items[0].second_nft_image);
+   console.log(appCollection.data.items[0].first_nft_image);
+   console.log(appCollection.data.items[0].fourth_nft_image);
+   console.log(appCollection.data.items[0].fifth_nft_image);
+   console.log(appCollection.data.items[0].collection_ticker_symbol);
+   console.log(appCollection.data.items[0].quote_currency);
+   
+   
+
 
     
   } catch (error) {
@@ -38,6 +49,7 @@ const getApi = async ()=>{
 
 const handleSubmit = (e) => {
   e.preventDefault();
+  getApi();
   
 
 };
@@ -70,7 +82,7 @@ const handleSubmit = (e) => {
   </Row>
 </Container>
 
-<img src="${productoMaquetado.url}" alt="" />
+<img src="{productoMaquetado.url}"  alt="" />
 <img src="" alt="" />
 <img src="" alt="" />
 <img src="" alt="" />
